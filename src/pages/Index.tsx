@@ -1,5 +1,5 @@
 const Index = () => {
-  const affiliateUrl = "https://example.com/citrusburn-official";
+  const affiliateUrl = "https://2e0e9nf8k9s8rw5zvmsnz51fwa.hop.clickbank.net";
 
   return (
     <div className="min-h-screen flex flex-col bg-background">
