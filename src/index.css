@@ -99,9 +99,10 @@
 
 @layer components {
   .cta-button {
-    @apply inline-flex items-center justify-center rounded-lg bg-primary text-primary-foreground font-medium transition-all duration-300;
-    @apply px-10 py-5 text-lg tracking-wide;
-    @apply hover:scale-[1.02] hover:shadow-lg hover:shadow-primary/25;
+    @apply inline-flex items-center justify-center rounded-xl bg-primary text-primary-foreground font-semibold transition-all duration-300;
+    @apply px-12 py-5 text-lg sm:text-xl tracking-wide;
+    @apply shadow-md shadow-primary/20;
+    @apply hover:scale-[1.03] hover:shadow-xl hover:shadow-primary/30 hover:brightness-105;
     @apply focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background;
     @apply active:scale-[0.98];
   }
@@ -111,10 +112,10 @@
   }
   
   .trust-item {
-    @apply text-foreground/70 text-sm font-normal;
+    @apply text-foreground/65 text-sm font-normal;
   }
   
-  .disclosure-text {
-    @apply text-muted-foreground text-xs leading-relaxed max-w-2xl;
+  .footer-disclosure {
+    @apply text-muted-foreground/60 text-[11px] leading-relaxed max-w-2xl;
   }
 }
