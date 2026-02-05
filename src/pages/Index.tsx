@@ -104,7 +104,7 @@ const Index = () => {
       </section>
 
       {/* Secondary CTA Section */}
-      <section className="py-16 sm:py-20 px-6 bg-[hsl(217_91%_25%)]">
+      <section className="py-16 sm:py-20 px-6 bg-[hsl(217_89%_40%)]">
         <div className="max-w-2xl mx-auto text-center">
           <h2 className="heading-display text-3xl sm:text-4xl font-bold text-white mb-4">
             Ready to Transform Your Metabolism?
@@ -125,7 +125,7 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="py-8 px-6 border-t border-white/10 bg-[hsl(217_91%_20%)]">
+      <footer className="py-8 px-6 border-t border-white/15 bg-[hsl(217_89%_35%)]">
         <div className="max-w-4xl mx-auto text-center space-y-4">
           {/* Affiliate Disclosure */}
           <p className="footer-disclosure mx-auto">
