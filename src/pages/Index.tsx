@@ -25,8 +25,8 @@ const Index = () => {
     <div className="min-h-screen flex flex-col bg-background">
       {/* Hero Section */}
       <section className="hero-section relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,hsl(var(--primary)/0.15),transparent_50%)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,hsl(var(--secondary)/0.1),transparent_50%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,hsl(180_100%_50%/0.1),transparent_50%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,hsl(217_91%_20%/0.5),transparent_50%)]" />
         
         <main className="relative flex-1 flex items-center justify-center px-6 py-16 sm:py-24 lg:py-32">
           <div className="text-center max-w-3xl animate-fade-in">
@@ -79,7 +79,7 @@ const Index = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-16 sm:py-20 px-6 bg-muted/30">
+      <section className="py-16 sm:py-20 px-6 bg-background">
         <div className="max-w-5xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {features.map((feature, index) => (
@@ -88,13 +88,13 @@ const Index = () => {
                 className="feature-card text-center"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-primary/10 text-primary mb-4">
+                <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-secondary/20 text-secondary mb-4">
                   <feature.icon className="w-7 h-7" />
                 </div>
-                <h3 className="text-lg font-semibold text-foreground mb-2">
+                <h3 className="text-lg font-semibold text-white mb-2">
                   {feature.title}
                 </h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">
+                <p className="text-white/70 text-sm leading-relaxed">
                   {feature.description}
                 </p>
               </div>
@@ -104,12 +104,12 @@ const Index = () => {
       </section>
 
       {/* Secondary CTA Section */}
-      <section className="py-16 sm:py-20 px-6">
+      <section className="py-16 sm:py-20 px-6 bg-[hsl(217_91%_25%)]">
         <div className="max-w-2xl mx-auto text-center">
-          <h2 className="heading-display text-3xl sm:text-4xl font-bold text-foreground mb-4">
+          <h2 className="heading-display text-3xl sm:text-4xl font-bold text-white mb-4">
             Ready to Transform Your Metabolism?
           </h2>
-          <p className="text-muted-foreground text-lg mb-8">
+          <p className="text-white/80 text-lg mb-8">
             Join thousands who have discovered the power of citrus-based support.
           </p>
           <a
@@ -125,7 +125,7 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="py-8 px-6 border-t border-border/50">
+      <footer className="py-8 px-6 border-t border-white/10 bg-[hsl(217_91%_20%)]">
         <div className="max-w-4xl mx-auto text-center space-y-4">
           {/* Affiliate Disclosure */}
           <p className="footer-disclosure mx-auto">
