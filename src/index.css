@@ -2,39 +2,41 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=DM+Sans:wght@300;400;500;600;700&display=swap');
 
 @layer base {
   :root {
-    --background: 40 33% 99%;
-    --foreground: 30 10% 15%;
+    --background: 0 0% 100%;
+    --foreground: 222 47% 11%;
 
-    --card: 40 33% 99%;
-    --card-foreground: 30 10% 15%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
 
-    --popover: 40 33% 99%;
-    --popover-foreground: 30 10% 15%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
 
-    --primary: 28 85% 52%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 142 76% 36%;
+    --primary-foreground: 0 0% 98%;
 
-    --secondary: 35 30% 95%;
-    --secondary-foreground: 30 10% 25%;
+    --secondary: 43 96% 56%;
+    --secondary-foreground: 222 47% 11%;
 
-    --muted: 35 20% 94%;
-    --muted-foreground: 30 8% 50%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
 
-    --accent: 28 70% 55%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 142 64% 45%;
+    --accent-foreground: 0 0% 98%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 35 20% 88%;
-    --input: 35 20% 88%;
-    --ring: 28 85% 52%;
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 142 76% 36%;
 
-    --radius: 0.75rem;
+    --radius: 1rem;
+
+    --hero-gradient: linear-gradient(135deg, hsl(142 76% 36% / 0.1) 0%, hsl(43 96% 56% / 0.1) 100%);
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -47,33 +49,35 @@
   }
 
   .dark {
-    --background: 30 10% 8%;
-    --foreground: 40 20% 95%;
+    --background: 222 47% 6%;
+    --foreground: 210 40% 98%;
 
-    --card: 30 10% 10%;
-    --card-foreground: 40 20% 95%;
+    --card: 222 47% 9%;
+    --card-foreground: 210 40% 98%;
 
-    --popover: 30 10% 10%;
-    --popover-foreground: 40 20% 95%;
+    --popover: 222 47% 9%;
+    --popover-foreground: 210 40% 98%;
 
-    --primary: 28 85% 55%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 142 76% 42%;
+    --primary-foreground: 0 0% 98%;
 
-    --secondary: 30 15% 18%;
-    --secondary-foreground: 40 20% 90%;
+    --secondary: 43 96% 56%;
+    --secondary-foreground: 222 47% 11%;
 
-    --muted: 30 15% 18%;
-    --muted-foreground: 35 10% 55%;
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 20% 65%;
 
-    --accent: 28 70% 50%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 142 64% 45%;
+    --accent-foreground: 0 0% 98%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 30 15% 20%;
-    --input: 30 15% 20%;
-    --ring: 28 85% 55%;
+    --border: 217 33% 17%;
+    --input: 217 33% 17%;
+    --ring: 142 76% 42%;
+
+    --hero-gradient: linear-gradient(135deg, hsl(142 76% 36% / 0.15) 0%, hsl(43 96% 56% / 0.1) 100%);
     
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
@@ -93,20 +97,44 @@
 
   body {
     @apply bg-background text-foreground antialiased;
-    font-family: 'Inter', system-ui, sans-serif;
+    font-family: 'DM Sans', system-ui, sans-serif;
   }
 }
 
 @layer components {
   .cta-button {
-    @apply inline-flex items-center justify-center rounded-xl bg-primary text-primary-foreground font-semibold transition-all duration-300;
-    @apply px-12 py-5 text-lg sm:text-xl tracking-wide;
-    @apply shadow-md shadow-primary/20;
-    @apply hover:scale-[1.03] hover:shadow-xl hover:shadow-primary/30 hover:brightness-105;
-    @apply focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background;
-    @apply active:scale-[0.98];
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-primary text-primary-foreground font-bold transition-all duration-300;
+    @apply px-10 py-4 text-base sm:text-lg tracking-wide uppercase;
+    @apply shadow-lg shadow-primary/30;
+    @apply hover:scale-105 hover:shadow-xl hover:shadow-primary/40 hover:brightness-110;
+    @apply focus:outline-none focus:ring-4 focus:ring-primary/30 focus:ring-offset-2 focus:ring-offset-background;
+    @apply active:scale-[0.97];
   }
   
+  .cta-button-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border-2 border-primary text-primary font-semibold transition-all duration-300;
+    @apply px-8 py-3 text-sm sm:text-base tracking-wide;
+    @apply hover:bg-primary hover:text-primary-foreground hover:scale-105;
+    @apply focus:outline-none focus:ring-4 focus:ring-primary/30;
+  }
+
+  .hero-section {
+    background: var(--hero-gradient);
+  }
+
+  .heading-display {
+    font-family: 'Playfair Display', serif;
+  }
+
+  .feature-card {
+    @apply bg-card rounded-2xl p-6 border border-border/50 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1;
+  }
+
+  .badge-highlight {
+    @apply inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full text-sm font-medium;
+    @apply bg-primary/10 text-primary;
+  }
+
   .trust-text {
     @apply text-muted-foreground text-sm font-medium tracking-wide;
   }
@@ -116,6 +144,10 @@
   }
   
   .footer-disclosure {
-    @apply text-muted-foreground/60 text-[11px] leading-relaxed max-w-2xl;
+    @apply text-muted-foreground/60 text-xs leading-relaxed max-w-3xl;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent;
   }
 }
