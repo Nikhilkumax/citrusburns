@@ -112,7 +112,7 @@ const Index = () => {
       </section>
 
       {/* 2. WHAT IS CITRUSBURN */}
-      <section className="py-8 sm:py-10 md:py-12 px-4 sm:px-6">
+      <section className="py-4 sm:py-6 md:py-8 px-4 sm:px-6">
         <div className="container max-w-5xl mx-auto">
           <div className="grid md:grid-cols-2 gap-6 sm:gap-10 items-center">
             <div>
