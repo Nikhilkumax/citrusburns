@@ -144,8 +144,36 @@ const Index = () => {
         </div>
       </section>
 
-      {/* 3. WHAT IS CITRUSBURN */}
+      {/* 3. ADVANTAGES SECTION - Moved under reviews */}
       <section className="py-8 sm:py-12 md:py-16 px-4 sm:px-6 bg-muted/30">
+        <div className="container max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-6 sm:gap-10 items-center">
+            <div className="order-2 md:order-1 rounded-2xl overflow-hidden shadow-lg">
+              <img
+                src={lifestyleImg}
+                alt="Calm wellness lifestyle with morning stretching"
+                className="w-full h-auto object-cover"
+              />
+            </div>
+            <div className="order-1 md:order-2">
+              <h2 className="section-title mb-4 sm:mb-6">Why People Find This Approach Interesting</h2>
+              <ul className="space-y-3 sm:space-y-4">
+                {advantages.map((advantage, index) => (
+                  <li key={index} className="flex items-start gap-3">
+                    <div className="flex-shrink-0 w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-primary/10 flex items-center justify-center mt-0.5">
+                      <Check className="w-3 h-3 sm:w-4 sm:h-4 text-primary" />
+                    </div>
+                    <span className="text-foreground text-sm sm:text-base">{advantage}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 4. WHAT IS CITRUSBURN */}
+      <section className="py-8 sm:py-12 md:py-16 px-4 sm:px-6">
         <div className="container max-w-5xl mx-auto">
           <div className="grid md:grid-cols-2 gap-6 sm:gap-10 items-center">
             <div>
@@ -169,8 +197,8 @@ const Index = () => {
         </div>
       </section>
 
-      {/* 4. HOW IT SUPPORTS THE BODY */}
-      <section className="py-8 sm:py-12 md:py-16 px-4 sm:px-6">
+      {/* 5. HOW IT SUPPORTS THE BODY */}
+      <section className="py-8 sm:py-12 md:py-16 px-4 sm:px-6 bg-muted/30">
         <div className="container max-w-5xl mx-auto">
           <div className="text-center mb-6 sm:mb-10">
             <h2 className="section-title mb-2 sm:mb-3">How It Supports the Body</h2>
@@ -193,34 +221,6 @@ const Index = () => {
                 </p>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 5. ADVANTAGES SECTION */}
-      <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 bg-muted/30">
-        <div className="container max-w-5xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-6 sm:gap-10 items-center">
-            <div className="order-2 md:order-1 rounded-2xl overflow-hidden shadow-lg">
-              <img
-                src={lifestyleImg}
-                alt="Calm wellness lifestyle with morning stretching"
-                className="w-full h-auto object-cover"
-              />
-            </div>
-            <div className="order-1 md:order-2">
-              <h2 className="section-title mb-4 sm:mb-6">Why People Find This Approach Interesting</h2>
-              <ul className="space-y-3 sm:space-y-4">
-                {advantages.map((advantage, index) => (
-                  <li key={index} className="flex items-start gap-3">
-                    <div className="flex-shrink-0 w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-primary/10 flex items-center justify-center mt-0.5">
-                      <Check className="w-3 h-3 sm:w-4 sm:h-4 text-primary" />
-                    </div>
-                    <span className="text-foreground text-sm sm:text-base">{advantage}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
           </div>
         </div>
       </section>
