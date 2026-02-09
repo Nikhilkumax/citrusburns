@@ -38,7 +38,7 @@ const Index = () => {
 
   const advantages = [
     "Plant-based and non-GMO formula",
-    "No harsh stimulants",
+    "No harsh stimulants, no exercise required",
     "Designed for daily use",
     "Focuses on balance, not extremes",
   ];
