@@ -111,8 +111,41 @@ const Index = () => {
         </div>
       </section>
 
-      {/* 2. WHAT IS CITRUSBURN */}
-      <section className="py-4 sm:py-6 md:py-8 px-4 sm:px-6">
+      {/* 2. TESTIMONIALS - Now first after hero */}
+      <section className="py-8 sm:py-12 md:py-16 px-4 sm:px-6">
+        <div className="container max-w-5xl mx-auto">
+          <div className="text-center mb-6 sm:mb-8">
+            <h2 className="section-title mb-2 sm:mb-3">What Users Are Saying</h2>
+            <p className="section-subtitle text-sm sm:text-base">
+              Real experiences from people who tried CitrusBurn.
+            </p>
+          </div>
+          
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
+            {testimonials.map((testimonial, index) => (
+              <div key={index} className="testimonial-card">
+                <Quote className="w-6 h-6 sm:w-8 sm:h-8 text-primary/30 mb-3 sm:mb-4" />
+                <p className="text-foreground text-sm leading-relaxed mb-4 sm:mb-6">
+                  "{testimonial.text}"
+                </p>
+                <div className="flex items-center gap-3">
+                  <img
+                    src={testimonial.image}
+                    alt={testimonial.name}
+                    className="w-9 h-9 sm:w-10 sm:h-10 rounded-full object-cover"
+                  />
+                  <span className="text-sm font-medium text-foreground">
+                    {testimonial.name}
+                  </span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 3. WHAT IS CITRUSBURN */}
+      <section className="py-8 sm:py-12 md:py-16 px-4 sm:px-6 bg-muted/30">
         <div className="container max-w-5xl mx-auto">
           <div className="grid md:grid-cols-2 gap-6 sm:gap-10 items-center">
             <div>
@@ -136,10 +169,10 @@ const Index = () => {
         </div>
       </section>
 
-      {/* 3. HOW IT SUPPORTS THE BODY */}
-      <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 bg-muted/30">
+      {/* 4. HOW IT SUPPORTS THE BODY */}
+      <section className="py-8 sm:py-12 md:py-16 px-4 sm:px-6">
         <div className="container max-w-5xl mx-auto">
-          <div className="text-center mb-8 sm:mb-12">
+          <div className="text-center mb-6 sm:mb-10">
             <h2 className="section-title mb-2 sm:mb-3">How It Supports the Body</h2>
             <p className="section-subtitle max-w-2xl mx-auto text-sm sm:text-base">
               A gentle, holistic approach to everyday wellness.
@@ -158,39 +191,6 @@ const Index = () => {
                 <p className="text-muted-foreground text-xs sm:text-sm leading-relaxed">
                   {item.description}
                 </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 4. TESTIMONIALS - Moved up */}
-      <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6">
-        <div className="container max-w-5xl mx-auto">
-          <div className="text-center mb-8 sm:mb-12">
-            <h2 className="section-title mb-3">What Users Are Saying</h2>
-            <p className="section-subtitle">
-              Real experiences from people who tried CitrusBurn.
-            </p>
-          </div>
-          
-          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
-            {testimonials.map((testimonial, index) => (
-              <div key={index} className="testimonial-card">
-                <Quote className="w-6 h-6 sm:w-8 sm:h-8 text-primary/30 mb-3 sm:mb-4" />
-                <p className="text-foreground text-sm leading-relaxed mb-4 sm:mb-6">
-                  "{testimonial.text}"
-                </p>
-                <div className="flex items-center gap-3">
-                  <img
-                    src={testimonial.image}
-                    alt={testimonial.name}
-                    className="w-9 h-9 sm:w-10 sm:h-10 rounded-full object-cover"
-                  />
-                  <span className="text-sm font-medium text-foreground">
-                    {testimonial.name}
-                  </span>
-                </div>
               </div>
             ))}
           </div>
