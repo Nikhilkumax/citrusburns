@@ -11,7 +11,7 @@ import testimonial3 from "@/assets/testimonial-3.jpg";
 import lifestyleImg from "@/assets/lifestyle.jpg";
 
 const Index = () => {
-  const affiliateUrl = "https://2e0e9nf8k9s8rw5zvmsnz51fwa.hop.clickbank.net";
+  const affiliateUrl = "https://hop.clickbank.net/?affiliate=03nikhil&vendor=citrusburn&pid=vsl&hd=1";
 
   const bodySupport = [
     {
