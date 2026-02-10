@@ -2,42 +2,39 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=DM+Sans:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222 47% 11%;
+    --background: 40 33% 99%;
+    --foreground: 30 10% 15%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222 47% 11%;
+    --card: 40 33% 99%;
+    --card-foreground: 30 10% 15%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222 47% 11%;
+    --popover: 40 33% 99%;
+    --popover-foreground: 30 10% 15%;
 
-    --primary: 142 76% 36%;
-    --primary: 24 95% 53%;
+    --primary: 28 85% 52%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 35 100% 50%;
-    --secondary-foreground: 222 47% 11%;
+    --secondary: 35 30% 95%;
+    --secondary-foreground: 30 10% 25%;
 
-    --muted: 210 40% 96%;
-    --muted-foreground: 215 16% 47%;
+    --muted: 35 20% 94%;
+    --muted-foreground: 30 8% 50%;
 
-    --accent: 17 88% 45%;
+    --accent: 28 70% 55%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214 32% 91%;
-    --input: 214 32% 91%;
-    --ring: 24 95% 53%;
+    --border: 35 20% 88%;
+    --input: 35 20% 88%;
+    --ring: 28 85% 52%;
 
-    --radius: 1rem;
-
-    --hero-gradient: linear-gradient(135deg, hsl(24 95% 53% / 0.1) 0%, hsl(35 100% 50% / 0.1) 100%);
+    --radius: 0.75rem;
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -50,35 +47,33 @@
   }
 
   .dark {
-    --background: 222 47% 6%;
-    --foreground: 210 40% 98%;
+    --background: 30 10% 8%;
+    --foreground: 40 20% 95%;
 
-    --card: 222 47% 9%;
-    --card-foreground: 210 40% 98%;
+    --card: 30 10% 10%;
+    --card-foreground: 40 20% 95%;
 
-    --popover: 222 47% 9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 30 10% 10%;
+    --popover-foreground: 40 20% 95%;
 
-    --primary: 24 95% 58%;
+    --primary: 28 85% 55%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 35 100% 55%;
-    --secondary-foreground: 222 47% 11%;
+    --secondary: 30 15% 18%;
+    --secondary-foreground: 40 20% 90%;
 
-    --muted: 217 33% 17%;
-    --muted-foreground: 215 20% 65%;
+    --muted: 30 15% 18%;
+    --muted-foreground: 35 10% 55%;
 
-    --accent: 17 88% 50%;
+    --accent: 28 70% 50%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 217 33% 17%;
-    --input: 217 33% 17%;
-    --ring: 24 95% 58%;
-
-    --hero-gradient: linear-gradient(135deg, hsl(24 95% 53% / 0.15) 0%, hsl(35 100% 50% / 0.1) 100%);
+    --border: 30 15% 20%;
+    --input: 30 15% 20%;
+    --ring: 28 85% 55%;
     
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
@@ -98,69 +93,28 @@
 
   body {
     @apply bg-background text-foreground antialiased;
-    font-family: 'DM Sans', system-ui, sans-serif;
+    font-family: 'Inter', system-ui, sans-serif;
   }
 }
 
 @layer components {
   .cta-button {
-    @apply inline-flex items-center justify-center gap-2 rounded-full bg-primary text-primary-foreground font-semibold transition-all duration-300;
-    @apply px-8 py-4 text-base tracking-wide;
-    @apply shadow-md shadow-primary/20;
-    @apply hover:shadow-lg hover:shadow-primary/30 hover:brightness-105;
-    @apply focus:outline-none focus:ring-4 focus:ring-primary/20;
+    @apply inline-flex items-center justify-center rounded-lg bg-primary text-primary-foreground font-medium transition-all duration-300;
+    @apply px-10 py-5 text-lg tracking-wide;
+    @apply hover:scale-[1.02] hover:shadow-lg hover:shadow-primary/25;
+    @apply focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background;
     @apply active:scale-[0.98];
   }
   
-  .cta-button-subtle {
-    @apply inline-flex items-center justify-center gap-2 rounded-full border border-border bg-background text-foreground font-medium transition-all duration-300;
-    @apply px-6 py-3 text-sm tracking-wide;
-    @apply hover:bg-muted hover:border-primary/30;
-    @apply focus:outline-none focus:ring-4 focus:ring-primary/20;
-  }
-
-  .hero-section {
-    @apply relative;
-  }
-
-  .heading-display {
-    font-family: 'Playfair Display', serif;
-  }
-
-  .section-card {
-    @apply bg-card rounded-2xl p-6 border border-border/50 shadow-sm;
-  }
-
-  .feature-card {
-    @apply bg-card rounded-2xl p-6 border border-border/50 shadow-sm hover:shadow-md transition-all duration-300;
-  }
-
-  .testimonial-card {
-    @apply bg-card rounded-2xl p-6 border border-border/50 shadow-sm;
-  }
-
-  .badge-soft {
-    @apply inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium;
-    @apply bg-primary/10 text-primary;
-  }
-
-  .section-title {
-    @apply heading-display text-2xl sm:text-3xl font-semibold text-foreground;
-  }
-
-  .section-subtitle {
-    @apply text-muted-foreground text-base sm:text-lg leading-relaxed;
+  .trust-text {
+    @apply text-muted-foreground text-sm font-medium tracking-wide;
   }
   
-  .footer-disclosure {
-    @apply text-muted-foreground/60 text-xs leading-relaxed max-w-3xl;
+  .trust-item {
+    @apply text-foreground/70 text-sm font-normal;
   }
-
-  .gradient-text {
-    @apply bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent;
-  }
-
-  .image-overlay {
-    @apply absolute inset-0 bg-gradient-to-t from-foreground/60 via-foreground/20 to-transparent;
+  
+  .disclosure-text {
+    @apply text-muted-foreground text-xs leading-relaxed max-w-2xl;
   }
 }
