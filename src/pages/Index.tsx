@@ -1,7 +1,7 @@
 import { Play } from "lucide-react";
 
 const Index = () => {
-  const affiliateUrl = "https://hop.clickbank.net/?affiliate=03nikhil&vendor=citrusburn&pid=vsl&hd=1&ex=1";
+  const affiliateUrl = "https://hop.clickbank.net/?affiliate=03nikhil&vendor=citrusburn";
 
   return (
     <div className="min-h-screen flex flex-col bg-background">
